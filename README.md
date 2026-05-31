@@ -12,7 +12,7 @@ Live demo: https://perpflow-eta.vercel.app
 - Anchor program is deployed on devnet.
 - Devnet market and mock USDC are initialized.
 - Frontend is deployed on Vercel.
-- Keeper can be deployed as a Render background worker using `render.yaml`.
+- Keeper can be deployed as a free Render web service using `render.yaml`.
 
 ## Project Structure
 
@@ -82,9 +82,9 @@ npm.cmd run dev
 
 ## Hosted Keeper
 
-The keeper must run continuously for automated liquidations, funding settlement, and AMM updates. Vercel hosts only the frontend, so the keeper should be deployed as a background worker.
+The keeper must run continuously for automated liquidations, funding settlement, and AMM updates. Vercel hosts only the frontend, so the keeper needs a separate host.
 
-This repository includes `render.yaml` for Render.
+This repository includes `render.yaml` for Render. It is configured as a free web service with a `/health` endpoint so it can be created without adding payment information. A true Render background worker is the better production fit, but Render does not support the free instance type for background workers.
 
 Required Render secret:
 

@@ -1,11 +1,12 @@
 services:
-  - type: worker
+  - type: web
     name: perpflow-keeper
     runtime: node
     rootDir: keeper
-    plan: starter
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
+    healthCheckPath: /health
     envVars:
       - key: RPC_URL
         value: https://api.devnet.solana.com

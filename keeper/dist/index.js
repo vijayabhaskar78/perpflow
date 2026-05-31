@@ -35,14 +35,31 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 const web3_js_1 = require("@solana/web3.js");
 const anchor = __importStar(require("@coral-xyz/anchor"));
+const http_1 = require("http");
 const config_1 = require("./config");
 const liquidator_1 = require("./liquidator");
 const funding_1 = require("./funding");
 const amm_1 = require("./amm");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const idl = require('../idl/perp_dex.json');
+function startHealthServer() {
+    const port = Number(process.env.PORT || 10000);
+    const server = (0, http_1.createServer)((req, res) => {
+        if (req.url === '/health') {
+            res.writeHead(200, { 'content-type': 'application/json' });
+            res.end(JSON.stringify({ ok: true, service: 'perpflow-keeper' }));
+            return;
+        }
+        res.writeHead(200, { 'content-type': 'text/plain' });
+        res.end('PerpFlow keeper is running\n');
+    });
+    server.listen(port, () => {
+        console.log(`Health server listening on port ${port}`);
+    });
+}
 async function main() {
     console.log('PerpFlow Keeper starting...');
+    startHealthServer();
     const connection = new web3_js_1.Connection(config_1.CLUSTER_URL, 'confirmed');
     const wallet = new anchor.Wallet(config_1.KEEPER_KEYPAIR);
     const provider = new anchor.AnchorProvider(connection, wallet, {
