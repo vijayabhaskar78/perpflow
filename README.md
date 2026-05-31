@@ -2,6 +2,8 @@
 
 PerpFlow is a Solana devnet perpetual futures demo built with Anchor. Users can connect a wallet, mint test USDC, deposit collateral, open leveraged SOL/USD long or short positions, and close positions through a Next.js frontend. A TypeScript keeper watches the market for funding settlement, AMM updates, and liquidations.
 
+Live demo: https://perpflow-eta.vercel.app
+
 ## Status
 
 - Anchor program builds locally.
@@ -9,6 +11,8 @@ PerpFlow is a Solana devnet perpetual futures demo built with Anchor. Users can 
 - Frontend builds locally.
 - Anchor program is deployed on devnet.
 - Devnet market and mock USDC are initialized.
+- Frontend is deployed on Vercel.
+- Keeper can be deployed as a Render background worker using `render.yaml`.
 
 ## Project Structure
 
@@ -75,6 +79,20 @@ npm.cmd run dev
 cd keeper
 npm.cmd run dev
 ```
+
+## Hosted Keeper
+
+The keeper must run continuously for automated liquidations, funding settlement, and AMM updates. Vercel hosts only the frontend, so the keeper should be deployed as a background worker.
+
+This repository includes `render.yaml` for Render.
+
+Required Render secret:
+
+```text
+KEEPER_KEYPAIR=<JSON array secret key for a funded devnet keeper wallet>
+```
+
+Use a dedicated keeper wallet instead of the program upgrade-authority wallet for public demos.
 
 ## Program
 

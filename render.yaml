@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: perpflow-keeper
+    runtime: node
+    rootDir: keeper
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: RPC_URL
+        value: https://api.devnet.solana.com
+      - key: PROGRAM_ID
+        value: 7Ly59fzmJRyAk3KEHijsScahSrDtqFH1mjtTAqSZRWcH
+      - key: SOL_USD_ORACLE
+        value: 7UVimffxr9ow1uXYxsr4LHAcV58mLzhmwaeKvJ1pjLiE
+      - key: KEEPER_KEYPAIR
+        sync: false
