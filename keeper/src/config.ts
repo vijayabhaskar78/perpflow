@@ -32,7 +32,7 @@ export const MARKETS = [
   },
 ];
 
-export const LIQUIDATION_POLL_MS = 400;
+export const LIQUIDATION_POLL_MS = Number(process.env.LIQUIDATION_POLL_MS || 10_000);
 export const FUNDING_SETTLE_INTERVAL_MS = 300_000;
 export const AMM_UPDATE_INTERVAL_MS = 900_000;
 export const STALE_FUNDING_THRESHOLD_SECS = 300;

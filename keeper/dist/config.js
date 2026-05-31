@@ -53,7 +53,7 @@ exports.MARKETS = [
         oracle: new anchor.web3.PublicKey(process.env.SOL_USD_ORACLE || 'H6ARHf6YXhGYeQfUzQNGk6rDNnLBQKrenN712K4AQJEG'),
     },
 ];
-exports.LIQUIDATION_POLL_MS = 400;
+exports.LIQUIDATION_POLL_MS = Number(process.env.LIQUIDATION_POLL_MS || 10000);
 exports.FUNDING_SETTLE_INTERVAL_MS = 300000;
 exports.AMM_UPDATE_INTERVAL_MS = 900000;
 exports.STALE_FUNDING_THRESHOLD_SECS = 300;
