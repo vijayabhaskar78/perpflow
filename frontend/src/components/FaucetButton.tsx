@@ -3,7 +3,7 @@ import { useState } from 'react';
 import * as anchor from '@coral-xyz/anchor';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { getAssociatedTokenAddress, createAssociatedTokenAccountInstruction } from '@solana/spl-token';
-import { PublicKey, Transaction } from '@solana/web3.js';
+import { PublicKey } from '@solana/web3.js';
 
 interface Props {
   program: anchor.Program | null;
@@ -27,9 +27,14 @@ export function FaucetButton({ program, usdcMint }: Props) {
         [Buffer.from('usdc_mint')],
         program.programId
       );
+      const tokenAccountInfo = await program.provider.connection.getAccountInfo(userTokenAccount);
+      const preInstructions = tokenAccountInfo
+        ? []
+        : [createAssociatedTokenAccountInstruction(publicKey, userTokenAccount, publicKey, usdcMint)];
 
       await (program.methods as any)
         .mintTestUsdc()
+        .preInstructions(preInstructions)
         .accounts({
           user: publicKey,
           usdcMint: usdcMintPda,

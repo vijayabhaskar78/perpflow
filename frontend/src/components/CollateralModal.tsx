@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import * as anchor from '@coral-xyz/anchor';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { getAssociatedTokenAddress } from '@solana/spl-token';
+import { createAssociatedTokenAccountInstruction, getAssociatedTokenAddress } from '@solana/spl-token';
 import { PublicKey, Connection } from '@solana/web3.js';
 import { getMarketPda, getUserAccountPda, getVaultPda } from '../utils/anchor';
 import { RPC_URL, MARKET_INDEX } from '../utils/constants';
@@ -36,10 +36,15 @@ export function CollateralModal({ program, collateralBalance, quoteMint, onSucce
       const vaultPda = getVaultPda();
       const userTokenAccount = await getAssociatedTokenAddress(quoteMint, publicKey);
       const amountBn = new anchor.BN(Math.floor(amountNum * 1_000_000));
+      const tokenAccountInfo = await connection.getAccountInfo(userTokenAccount);
+      const preInstructions = tokenAccountInfo
+        ? []
+        : [createAssociatedTokenAccountInstruction(publicKey, userTokenAccount, publicKey, quoteMint)];
 
       if (tab === 'deposit') {
         await (program.methods as any)
           .depositCollateral(MARKET_INDEX, amountBn)
+          .preInstructions(preInstructions)
           .accounts({
             user: publicKey,
             userAccount: userAccountPda,
@@ -54,6 +59,7 @@ export function CollateralModal({ program, collateralBalance, quoteMint, onSucce
       } else {
         await (program.methods as any)
           .withdrawCollateral(MARKET_INDEX, amountBn)
+          .preInstructions(preInstructions)
           .accounts({
             user: publicKey,
             userAccount: userAccountPda,
