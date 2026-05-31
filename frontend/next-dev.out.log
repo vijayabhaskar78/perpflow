@@ -1,0 +1,25 @@
+
+> perp-flow-frontend@0.1.0 dev
+> next dev -p 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.2s (1317 modules)
+ GET / 200 in 8704ms
+ ✓ Compiled in 791ms (587 modules)
+ GET / 200 in 73ms
+   Reload env: .env.local
+ ✓ Compiled in 656ms (1304 modules)
+ ✓ Compiled /_not-found in 305ms (1293 modules)
+ GET /_next/static/css/app/layout.css?v=1780241779717 404 in 585ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1867ms (1516 modules)
+ GET / 500 in 2372ms
+ ✓ Compiled /_not-found in 282ms (1519 modules)
+ GET /_next/static/css/app/layout.css?v=1780242230260 404 in 524ms
+[?25h

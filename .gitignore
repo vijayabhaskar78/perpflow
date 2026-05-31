@@ -1,0 +1,10 @@
+target/
+node_modules/
+.anchor/
+devnet-config.json
+deployer-keypair.json
+deployer-keypair-*.json
+keeper/.env
+frontend/.env.local
+*.so
+*.d

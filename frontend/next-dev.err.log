@@ -1,0 +1,118 @@
+bigint: Failed to load bindings, pure JS will be used (try npm run rebuild?)
+ ⨯ Error: Cannot find module './983.js'
+Require stack:
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1448:15)
+    at C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require-hook.js:55:36
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1234:25)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1548:12)
+    at mod.require (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at __webpack_require__.f.require (C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js:198:28)
+    at C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js:162:22)
+    at C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\page.js:1:219249
+    at Object.<anonymous> (C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\page.js:1:219290)
+    at Module._compile (node:internal/modules/cjs/loader:1804:14)
+    at Object..js (node:internal/modules/cjs/loader:1936:10)
+    at Module.load (node:internal/modules/cjs/loader:1525:32)
+    at Module._load (node:internal/modules/cjs/loader:1327:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1548:12)
+    at mod.require (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:152:16)
+    at requirePage (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js:109:84)
+    at C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js:103:84
+    at async loadComponentsImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\next-server.js:714:36)
+    at async DevServer.findPageComponents (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\base-server.js:1962:32)
+    at async DevServer.pipeImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\base-server.js:818:17)
+    at async C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\router-server.js:179:21)
+    at async handleRequest (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\router-server.js:359:24)
+    at async requestHandlerImpl (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\router-server.js:383:13)
+    at async Server.requestListener (C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\.next\\server\\app\\_not-found\\page.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\vijay\\OneDrive\\Documents\\Project\\frontend\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ],
+  page: '/'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\bs58.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/bs58' in C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server for build dependencies doesn't lead to expected result 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\bs58.js', but to 'Error: Can't resolve './vendor-chunks/bs58' in 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/bs58 (expected C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\bs58.js)
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/bufferutil' in C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server for build dependencies doesn't lead to expected result 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\bufferutil.js', but to 'Error: Can't resolve './vendor-chunks/bufferutil' in 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/bufferutil (expected C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\bufferutil.js)
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/safe-buffer' in C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server for build dependencies doesn't lead to expected result 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\safe-buffer.js', but to 'Error: Can't resolve './vendor-chunks/safe-buffer' in 'C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/safe-buffer (expected C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\vendor-chunks\safe-buffer.js)
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\vijay\OneDrive\Documents\Project\frontend\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js

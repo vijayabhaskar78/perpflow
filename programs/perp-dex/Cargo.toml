@@ -1,0 +1,23 @@
+[package]
+name = "perp-dex"
+version = "0.1.0"
+description = "PerpFlow: On-chain vAMM perpetual futures DEX"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+name = "perp_dex"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+devnet = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "=0.32.1", features = ["init-if-needed"] }
+anchor-spl = { version = "=0.32.1", features = ["token"] }
+pyth-solana-receiver-sdk = "1.2.0"
