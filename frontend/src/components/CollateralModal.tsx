@@ -26,6 +26,14 @@ export function CollateralModal({ program, collateralBalance, quoteMint, onSucce
     if (!program || !publicKey || !quoteMint) return;
     const amountNum = parseFloat(amount);
     if (!amountNum || amountNum <= 0) { setError('Invalid amount'); return; }
+    if (tab === 'deposit' && collateralBalance <= 0) {
+      setError('Click "Get 10,000 test USDC" first, then deposit.');
+      return;
+    }
+    if (tab === 'deposit' && amountNum * 1_000_000 > collateralBalance) {
+      setError('Deposit amount is greater than your test USDC balance.');
+      return;
+    }
 
     setLoading(true);
     setError('');
